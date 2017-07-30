@@ -1,0 +1,38 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title id="navbartext">EasyPoly 2.0</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-list class="mainframe">
+	
+		<ion-item>
+	    <ion-label>Amount</ion-label>
+	    <ion-input type="number" [(ngModel)]="inp_amount" name="amount"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label>Interest Rate</ion-label>
+	    <ion-input type="number" [(ngModel)]="inp_rate" name="rate"></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label>Varika Ganana</ion-label>
+	    <ion-input type="number" [(ngModel)]="inp_varika" name="varika"></ion-input>
+	  </ion-item>
+	  <button ion-button (click)="calculate()" block>Calculate</button>
+
+	  
+	  <ion-row center><ion-label>Varikaya Awasanaye Mudala:   {{ans}}</ion-label></ion-row>
+  	<div padding>
+  		
+	</div>
+		
+	
+</ion-list>

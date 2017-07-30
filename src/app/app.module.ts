@@ -7,13 +7,17 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoancalcPage } from '../pages/loancalc/loancalc';
+import { NpvcalcPage } from '../pages/npvcalc/npvcalc';
+import { DepocalcPage } from '../pages/depocalc/depocalc';
 
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    LoancalcPage
+    LoancalcPage,
+    NpvcalcPage,
+    DepocalcPage
 
   ],
   imports: [
@@ -24,7 +28,9 @@ import { LoancalcPage } from '../pages/loancalc/loancalc';
   entryComponents: [
     MyApp,
     HomePage,
-    LoancalcPage
+    LoancalcPage,
+    NpvcalcPage,
+    DepocalcPage
   ],
   providers: [
     StatusBar,

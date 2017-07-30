@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { LoancalcPage } from '../loancalc/loancalc';
-import { DepocalcPage } from '../depocalc/depocalc'
+import { DepocalcPage } from '../depocalc/depocalc';
+import { NpvcalcPage } from '../npvcalc/npvcalc';
 
 @Component({
   selector: 'page-home',
@@ -19,6 +20,9 @@ export class HomePage {
   }
   depocalcPage(){
   	this.navCtrl.push(DepocalcPage);
+  }
+  npvcalcPage(){
+    this.navCtrl.push(NpvcalcPage);
   }
 
 }

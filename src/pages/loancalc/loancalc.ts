@@ -18,7 +18,10 @@ export class LoancalcPage {
   inp_amount:number;
   inp_rate:number;
   inp_varika:number;
-  ans:number;
+  int_per_month:number;
+  total_per_month:number;
+  total_interest:number;
+  total_amout:number
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -30,7 +33,12 @@ export class LoancalcPage {
 
   calculate(){
 
-  	console.log(this.ans = Number(this.inp_amount)*(Number(this.inp_rate)/100)/Number(this.inp_varika));
+  	this.total_interest = Math.floor((Number(this.inp_amount)*(Number(this.inp_rate)/100))*100)/100;
+    this.total_amout = Math.floor((Number(this.inp_amount)+Number(this.inp_amount)*(Number(this.inp_rate)/100))*100)/100;
+    this.int_per_month = Math.floor((Number(this.inp_amount)*(Number(this.inp_rate)/100)/Number(this.inp_varika))*100)/100;
+    this.total_per_month = Math.floor((Number(this.inp_amount)*(1+Number(this.inp_rate)/100)/Number(this.inp_varika))*100)/100;
+    
+
   }
   reset(){
     this.inp_amount = 0;

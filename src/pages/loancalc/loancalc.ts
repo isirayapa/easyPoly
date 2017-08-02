@@ -32,5 +32,10 @@ export class LoancalcPage {
 
   	console.log(this.ans = Number(this.inp_amount)*(Number(this.inp_rate)/100)/Number(this.inp_varika));
   }
+  reset(){
+    this.inp_amount = 0;
+    this.inp_rate = 0;
+    this.inp_varika = 0;
+  }
 
 }

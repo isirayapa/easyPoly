@@ -20,6 +20,11 @@
 	</ion-item>
 
 	<ion-item>
+	    <ion-label>Discount Rate</ion-label>
+	    <ion-input placeholder="3%" type="number" [(ngModel)]="inp_Drate" name="amount"></ion-input>
+	</ion-item>
+
+	<ion-item>
   		<ion-label>Arambaka Dinaya</ion-label>
   		<ion-datetime displayFormat="MM/YYYY" pickerFormat="MMMM YYYY" [(ngModel)]="startDate"></ion-datetime>
 	</ion-item>
@@ -32,6 +37,7 @@
 	<button ion-button (click)="calculate()" block>Calculate</button>
 	<button ion-button (click)="reset()" block>Reset</button>
 
-
-
+	<ion-grid>
+	  	<ion-row><ion-label>Ayojana Prathilabaya:   {{out_ROI}}%</ion-label></ion-row>
+	</ion-grid>
 </ion-list>

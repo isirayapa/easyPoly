@@ -18,12 +18,26 @@ export class RoiCalcPage {
 	endDate:any;
 	inp_inv:number;
 	inp_return:number;
+	inp_Drate:number;
+	out_ROI:number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  	this.inp_Drate = 3;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RoiCalcPage');
   }
+  calculate(){
+  	this.out_ROI = ((Number(this.inp_return)*(1-(Number(this.inp_Drate)/100))-Number(this.inp_inv)))*100/Number(this.inp_inv);
+
+  };
+
+  reset(){
+  	this.inp_inv = 0;
+  	this.inp_return = 0;
+  	this.out_ROI = 0;
+
+  };
 
 }

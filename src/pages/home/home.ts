@@ -4,6 +4,7 @@ import { NavController } from 'ionic-angular';
 import { LoancalcPage } from '../loancalc/loancalc';
 import { DepocalcPage } from '../depocalc/depocalc';
 import { NpvcalcPage } from '../npvcalc/npvcalc';
+import { RoiCalcPage } from'../roi-calc/roi-calc';
 
 @Component({
   selector: 'page-home',
@@ -23,6 +24,9 @@ export class HomePage {
   }
   npvcalcPage(){
     this.navCtrl.push(NpvcalcPage);
+  }
+  roicalcPage(){
+    this.navCtrl.push(RoiCalcPage);
   }
 
 }

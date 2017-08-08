@@ -18,7 +18,7 @@
 	  </ion-item>
 
 	  <ion-item>
-	    <ion-label>Interest Rate</ion-label>
+	    <ion-label>Interest Rate</ion-label>%
 	    <ion-input type="number" [(ngModel)]="inp_rate" name="rate"></ion-input>
 	  </ion-item>
 
@@ -36,46 +36,50 @@
 	  <ion-label>Varikayaka polii agaya :   {{int_per_month}}</ion-label>
 	  <ion-label>Varikayakata geweemata athi mulu mudala :   {{total_per_month}}</ion-label>
 	   -->
-	  <ion-row>
-    	<ion-col>
-      		<strong>Mulu Naya polii agaya :</strong>
-    	</ion-col>
-	    <ion-col>
-	      <strong>{{total_interest}}</strong>
-	    </ion-col>
-  	  </ion-row>
+	   <ion-grid>
+	   <ion-row class="txthead">Sampuurna kaala seemawa sandaha</ion-row>
+		  <ion-row>
+	    	<ion-col class="result">
+	      		<strong>Mulu Naya polii agaya :</strong>
+	    	</ion-col>
+		    <ion-col class="result">
+		      <strong>{{total_interest | currency:'SLR':true:'1.2-2'}}</strong>
+		    </ion-col>
+	  	  </ion-row>
 
-  	  <ion-row>
-    	<ion-col>
-      		<strong>Mulu naya Mudala :</strong>
-    	</ion-col>
-	    <ion-col>
-	      <strong>{{total_amout}}</strong>
-	    </ion-col>
-  	  </ion-row>
-  	  <br>
+	  	  <ion-row>
+	    	<ion-col class="result">
+	      		<strong>Mulu naya Mudala :</strong>
+	    	</ion-col>
+		    <ion-col class="result">
+		      <strong>{{total_amout | currency:'SLR':true:'1.2-2'}}</strong>
+		    </ion-col>
+	  	  </ion-row>
+	  	  
+	  	  <ion-row class="txthead">Ek maasika varikayaka</ion-row>
+	  	  <ion-row>
+	    	<ion-col class="result">
+	      		<strong>polii agaya :</strong>
+	    	</ion-col>
+		    <ion-col class="result">
+		      <strong>{{int_per_month | currency:'SLR':true:'1.2-2'}}</strong>
+		    </ion-col>
+	  	  </ion-row>
 
-  	  <ion-row>
-    	<ion-col>
-      		<strong>Varikayaka polii agaya :</strong>
-    	</ion-col>
-	    <ion-col>
-	      <strong>{{int_per_month}}</strong>
-	    </ion-col>
-  	  </ion-row>
-
-  	  <ion-row>
-    	<ion-col>
-      		<strong>Varikayakata geweemata athi mulu mudala :</strong>
-    	</ion-col>
-	    <ion-col>
-	      <strong>{{total_per_month}}</strong>
-	    </ion-col>
-  	  </ion-row>
-	    
-  	<div padding>
-  		
-	</div>
+	  	  <ion-row>
+	    	<ion-col class="result">
+	      		<strong>gewana mudala :</strong>
+	    	</ion-col>
+		    <ion-col class="result">
+		      <strong>{{total_per_month | currency:'SLR':true:'1.2-2'}}</strong>
+		    </ion-col>
+	  	  </ion-row>
+		    
+	  	<div padding>
+	  		
+		</div>
+	</ion-grid>
 		
 	
 </ion-list>
+	

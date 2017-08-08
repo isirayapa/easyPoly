@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { LoancalcPage } from '../pages/loancalc/loancalc';
 import { NpvcalcPage } from '../pages/npvcalc/npvcalc';
 import { DepocalcPage } from '../pages/depocalc/depocalc';
+import { RoiCalcPage } from '../pages/roi-calc/roi-calc';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { DepocalcPage } from '../pages/depocalc/depocalc';
     HomePage,
     LoancalcPage,
     NpvcalcPage,
-    DepocalcPage
+    DepocalcPage,
+    RoiCalcPage
 
   ],
   imports: [
@@ -30,7 +32,8 @@ import { DepocalcPage } from '../pages/depocalc/depocalc';
     HomePage,
     LoancalcPage,
     NpvcalcPage,
-    DepocalcPage
+    DepocalcPage,
+    RoiCalcPage
   ],
   providers: [
     StatusBar,

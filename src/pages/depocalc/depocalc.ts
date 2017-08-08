@@ -16,14 +16,16 @@ export class DepocalcPage {
   inp_amount:number;
   inp_rate:number;
   inp_varika:number;
-  ans:number;
+  ans_tot_int:number;
+  ans_tot:number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   calculate(){
 
-  	console.log(this.ans = Number(this.inp_amount)*(Number(this.inp_rate)/100)/Number(this.inp_varika));
+    this.ans_tot_int = Number(this.inp_amount)*(Number(this.inp_rate)*Number(this.inp_varika)/1200);
+    this.ans_tot = Number(this.inp_amount)+ Number(this.inp_amount)*(Number(this.inp_rate)*Number(this.inp_varika)/1200);
   };
 
   ionViewDidLoad() {

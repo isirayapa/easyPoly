@@ -1,0 +1,37 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title id="navbartext">EasyPoly 2.0</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-list class="mainframe">
+	<ion-item>
+	    <ion-label>Ayojanaya</ion-label>
+	    <ion-input type="number" [(ngModel)]="inp_inv" name="amount"></ion-input>
+	</ion-item>
+
+	<ion-item>
+	    <ion-label>Adayama</ion-label>
+	    <ion-input type="number" [(ngModel)]="inp_return" name="amount"></ion-input>
+	</ion-item>
+
+	<ion-item>
+  		<ion-label>Arambaka Dinaya</ion-label>
+  		<ion-datetime displayFormat="MM/YYYY" pickerFormat="MMMM YYYY" [(ngModel)]="startDate"></ion-datetime>
+	</ion-item>
+
+	<ion-item>
+  		<ion-label>Awasana Dinaya</ion-label>
+  		<ion-datetime displayFormat="MM/YYYY" pickerFormat="MMMM YYYY" [(ngModel)]="endDate"></ion-datetime>
+	</ion-item>
+
+	<button ion-button (click)="calculate()" block>Calculate</button>
+	<button ion-button (click)="reset()" block>Reset</button>
+
+
+
+</ion-list>

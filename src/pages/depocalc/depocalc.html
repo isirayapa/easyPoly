@@ -13,26 +13,26 @@
 <ion-list class="mainframe">
 	
 		<ion-item>
-	    <ion-label>Amount</ion-label>
+	    <ion-label>Arambaka mudala</ion-label>
 	    <ion-input type="number" [(ngModel)]="inp_amount" name="amount"></ion-input>
 	  </ion-item>
 
 	  <ion-item>
-	    <ion-label>Interest Rate</ion-label>
-	    <ion-input type="number" [(ngModel)]="inp_rate" name="rate"></ion-input>
+	    <ion-label>Varshika poliya</ion-label>
+	    <ion-input type="number" [(ngModel)]="inp_rate" name="rate"></ion-input>%
 	  </ion-item>
 
 	  <ion-item>
-	    <ion-label>Varika Ganana</ion-label>
+	    <ion-label>kala seemawa(Masa)</ion-label>
 	    <ion-input type="number" [(ngModel)]="inp_varika" name="varika"></ion-input>
+
 	  </ion-item>
 	  <button ion-button (click)="calculate()" block>Calculate</button>
 
-	  
-	  <ion-row center><ion-label>Varikaya Awasanaye Mudala:   {{ans}}</ion-label></ion-row>
-  	<div padding>
+	  <ion-grid>
+	  	<ion-row><ion-label>Ipayuu Poliya:   {{ans_tot_int| currency:'SLR':true:'1.2-2'}}</ion-label></ion-row>
+	  	<ion-row><ion-label>Awasana sheshaya:   {{ans_tot| currency:'SLR':true:'1.2-2'}}</ion-label></ion-row>
+	  </ion-grid>
   		
-	</div>
-		
 	
 </ion-list>

@@ -13,21 +13,24 @@
 <ion-list class="mainframe">
 	
 		<ion-item>
-	    <ion-label>Amount</ion-label>
+	    <!-- <ion-label>Amount</ion-label> -->
+	    <ion-label>ප්‍රමාණය</ion-label>
 	    <ion-input type="number" [(ngModel)]="inp_amount" name="amount"></ion-input>
 	  </ion-item>
 
 	  <ion-item>
-	    <ion-label>Interest Rate</ion-label>
+	    <!-- <ion-label>Interest Rate</ion-label> -->
+	    <ion-label>පොලී අනුපාතය</ion-label>
 	    <ion-input placeholder="%" type="number" [(ngModel)]="inp_rate" name="rate"></ion-input>
 	  </ion-item>
 
 	  <ion-item>
-	    <ion-label>Varika Ganana</ion-label>
+	    <!-- <ion-label>Varika Ganana</ion-label> -->
+	    <ion-label>වාරික ගණන</ion-label>
 	    <ion-input type="number" [(ngModel)]="inp_varika" name="varika"></ion-input>
 	  </ion-item>
-	  <button ion-button (click)="calculate()" block>Calculate</button>
-	  <button ion-button (click)="reset()" block>Reset</button>
+	  <button ion-button (click)="calculate()" block>ගණනය කරන්න</button>
+	  <button ion-button (click)="reset()" block>නැවත සකසන්න</button>
 
 	  
 	  <!-- <ion-label>Mulu Naya polii agaya :   {{total_interest}}</ion-label> -->
@@ -37,10 +40,12 @@
 	  <ion-label>Varikayakata geweemata athi mulu mudala :   {{total_per_month}}</ion-label>
 	   -->
 	   <ion-grid>
-	   <ion-row class="txthead">Sampuurna kaala seemawa sandaha</ion-row>
+	   <!-- <ion-row class="txthead">Sampuurna kaala seemawa sandaha</ion-row> -->
+	   <ion-row class="txthead">සම්පූර්ණ කාළ සීමාව සඳහා</ion-row>
 		  <ion-row>
 	    	<ion-col class="result">
-	      		<strong>Mulu Naya polii agaya :</strong>
+	      		<!-- <strong>Mulu Naya polii agaya :</strong> -->
+	      		<strong>මුලු ණය මුදල :</strong>
 	    	</ion-col>
 		    <ion-col class="result">
 		      <strong>{{total_interest | currency:'SLR':true:'1.2-2'}}</strong>
@@ -49,17 +54,21 @@
 
 	  	  <ion-row>
 	    	<ion-col class="result">
-	      		<strong>Mulu naya Mudala :</strong>
+	      		<!-- <strong>Mulu naya Mudala :</strong> -->
+	      		<strong>මුලු ණය මුදල :</strong>
 	    	</ion-col>
 		    <ion-col class="result">
 		      <strong>{{total_amout | currency:'SLR':true:'1.2-2'}}</strong>
 		    </ion-col>
 	  	  </ion-row>
 	  	  
-	  	  <ion-row class="txthead">Ek maasika varikayaka</ion-row>
+	  	  <!-- <ion-row class="txthead">Ek maasika varikayaka</ion-row> -->
+	  	  <ion-row class="txthead">එක් මාසික වාරිකයක</ion-row>
 	  	  <ion-row>
 	    	<ion-col class="result">
-	      		<strong>polii agaya :</strong>
+	      		<!-- <strong>polii agaya :</strong> -->
+	      		<strong>පොලී අගය :</strong>
+
 	    	</ion-col>
 		    <ion-col class="result">
 		      <strong>{{int_per_month | currency:'SLR':true:'1.2-2'}}</strong>
@@ -68,7 +77,8 @@
 
 	  	  <ion-row>
 	    	<ion-col class="result">
-	      		<strong>gewana mudala :</strong>
+	      		<!-- <strong>gewana mudala :</strong> -->
+	      		<strong>ගෙවන මුදල :</strong>
 	    	</ion-col>
 		    <ion-col class="result">
 		      <strong>{{total_per_month | currency:'SLR':true:'1.2-2'}}</strong>

@@ -10,34 +10,34 @@
 
 <ion-list class="mainframe">
 	<ion-item>
-	    <ion-label>Ayojanaya</ion-label>
+	    <ion-label>ආයෝජනය</ion-label>
 	    <ion-input type="number" [(ngModel)]="inp_inv" name="amount"></ion-input>
 	</ion-item>
 
 	<ion-item>
-	    <ion-label>Adayama</ion-label>
+	    <ion-label>ආදායම</ion-label>
 	    <ion-input type="number" [(ngModel)]="inp_return" name="amount"></ion-input>
 	</ion-item>
 
 	<ion-item>
-	    <ion-label>Discount Rate</ion-label>
+	    <ion-label>වට්ටම් අනුපාතය</ion-label>
 	    <ion-input placeholder="3%" type="number" [(ngModel)]="inp_Drate" name="amount"></ion-input>
 	</ion-item>
 
 	<ion-item>
-  		<ion-label>Arambaka Dinaya</ion-label>
+  		<ion-label>ආරම්භක දිනය</ion-label>
   		<ion-datetime displayFormat="MM/YYYY" pickerFormat="MMMM YYYY" [(ngModel)]="startDate"></ion-datetime>
 	</ion-item>
 
 	<ion-item>
-  		<ion-label>Awasana Dinaya</ion-label>
+  		<ion-label>අවසාන දිනය</ion-label>
   		<ion-datetime displayFormat="MM/YYYY" pickerFormat="MMMM YYYY" [(ngModel)]="endDate"></ion-datetime>
 	</ion-item>
 
-	<button ion-button (click)="calculate()" block>Calculate</button>
-	<button ion-button (click)="reset()" block>Reset</button>
+	<button ion-button (click)="calculate()" block>ගණනය කරන්න</button>
+	<button ion-button (click)="reset()" block>නැවත සකසන්න</button>
 
 	<ion-grid>
-	  	<ion-row><ion-label>Ayojana Prathilabaya:   {{out_ROI}}%</ion-label></ion-row>
+	  	<ion-row><ion-label>ආයෝජන ප්‍රතිලාභය:   {{out_ROI}}%</ion-label></ion-row>
 	</ion-grid>
 </ion-list>

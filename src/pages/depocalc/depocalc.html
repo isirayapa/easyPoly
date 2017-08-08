@@ -13,25 +13,30 @@
 <ion-list class="mainframe">
 	
 		<ion-item>
-	    <ion-label>Arambaka mudala</ion-label>
+	    <!-- <ion-label>Arambaka mudala</ion-label> -->
+	    <ion-label>ආරම්භක මුදල</ion-label>
 	    <ion-input type="number" [(ngModel)]="inp_amount" name="amount"></ion-input>
 	  </ion-item>
 
 	  <ion-item>
-	    <ion-label>Varshika poliya</ion-label>
+	    <!-- <ion-label>Varshika poliya</ion-label> -->
+	    <ion-label>වාර්ෂික පොලිය</ion-label>
 	    <ion-input placeholder="%" type="number" [(ngModel)]="inp_rate" name="rate"></ion-input>%
 	  </ion-item>
 
 	  <ion-item>
 	    <ion-label>kala seemawa(Masa)</ion-label>
+	    <ion-label>කාල සීමාව (මාස ගණන )</ion-label>
 	    <ion-input type="number" [(ngModel)]="inp_varika" name="varika"></ion-input>
 
 	  </ion-item>
-	  <button ion-button (click)="calculate()" block>Calculate</button>
+	  <button ion-button (click)="calculate()" block>ගණනය කරන්න</button>
 
 	  <ion-grid>
-	  	<ion-row><ion-label>Ipayuu Poliya:   {{ans_tot_int| currency:'SLR':true:'1.2-2'}}</ion-label></ion-row>
-	  	<ion-row><ion-label>Awasana sheshaya:   {{ans_tot| currency:'SLR':true:'1.2-2'}}</ion-label></ion-row>
+	  	<!-- <ion-row><ion-label>Ipayuu Poliya:   {{ans_tot_int| currency:'SLR':true:'1.2-2'}}</ion-label></ion-row> -->
+	  	<ion-row><ion-label>ඉපැයු පොලිය:   {{ans_tot_int| currency:'SLR':true:'1.2-2'}}</ion-label></ion-row>
+	  	<!-- <ion-row><ion-label>Awasana sheshaya:   {{ans_tot| currency:'SLR':true:'1.2-2'}}</ion-label></ion-row> -->
+	  	<ion-row><ion-label>අවසාන ශේෂය:    {{ans_tot| currency:'SLR':true:'1.2-2'}}</ion-label></ion-row>
 	  </ion-grid>
   		
 	

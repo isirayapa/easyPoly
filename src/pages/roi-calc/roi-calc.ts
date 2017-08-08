@@ -29,7 +29,7 @@ export class RoiCalcPage {
     console.log('ionViewDidLoad RoiCalcPage');
   }
   calculate(){
-  	this.out_ROI = ((Number(this.inp_return)*(1-(Number(this.inp_Drate)/100))-Number(this.inp_inv)))*100/Number(this.inp_inv);
+  	this.out_ROI = Math.floor(((Number(this.inp_return)*(1-(Number(this.inp_Drate)/100))-Number(this.inp_inv)))*100/Number(this.inp_inv)*100)/100;
 
   };
 

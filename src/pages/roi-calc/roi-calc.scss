@@ -25,4 +25,19 @@ page-roi-calc {
 	  background-color: #f2dede;
 	}
 
+	.result{
+		
+		border:groove;
+	}
+	ion-grid{
+		margin-top:8%;
+	}
+	.txthead{
+		margin-top:4%;
+		margin-bottom: 3%;
+	}
+	.textresult{
+		text-align: -webkit-right;
+	}
+
 }

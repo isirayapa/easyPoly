@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+
 /**
  * Generated class for the RoiCalcPage page.
  *
@@ -39,5 +40,7 @@ export class RoiCalcPage {
   	this.out_ROI = 0;
 
   };
+
+ 
 
 }

@@ -11,39 +11,41 @@
 
 <ion-list class="mainframe">
   <ion-item>
-    <!--<ion-label>Ayojanaya</ion-label>-->
+    <!-- <ion-label>Ayojanaya</ion-label> -->
     <ion-label>ආයෝජනය</ion-label>
     <ion-input type="number" [(ngModel)]="inp_inv" name="amount"></ion-input>
   </ion-item>
 
   <ion-item>
-    <!--<ion-label>wattam anupathaya</ion-label>-->
+    <!-- <ion-label>wattam anupathaya</ion-label> -->
     <ion-label>වට්ටම් අනුපාතය</ion-label>
     
     <ion-input placeholder="%" type="number" [(ngModel)]="DiscFactor" name="rate"></ion-input>
   </ion-item>
 
   <ion-card>
-   <!-- <ion-card-header>
-      Masikawa Asthamenthu laba/Alaba 
-    </ion-card-header>-->
     <ion-card-header>
-      මාසික ඇස්තමේන්තු ලාභ / අලාභ  
+      <!-- Masikawa Asthamenthu laba/Alaba  -->
+      මාසික ඇස්තමේන්තු ලාභ / අලාභ
     </ion-card-header>
     <ion-card-content>
       <ion-item>
         <ion-input placeholder="%" type="number" [(ngModel)]="inp_Cf" name="amount"></ion-input>
       </ion-item>
-      <!--<button ion-button (click)="addCf()" block>+/Athulath karanna</button> -->
+      <!-- <button ion-button (click)="addCf()"  block>+/Athulath karanna</button>  -->
       <button ion-button (click)="addCf()" block>+/ඇතුලත් කරන්න</button>    
     </ion-card-content>
   </ion-card>
-  <!--<button ion-button (click)="Cashflowdifference()" block>Gananaya karanna</button>-->
+  <!-- <button ion-button (click)="Cashflowdifference()" block>Gananaya karanna</button> -->
   <button ion-button (click)="Cashflowdifference()" block>ගණනය කරන්න </button>
 </ion-list>
 <ion-grid>
- <!--<ion-row>Labaya/Paduwa:   {{ans | currency:'SLR':true:'1.2-2'}}</ion-row>-->
-  <ion-row>ලාභය / පාඩුව:   {{ans | currency:'SLR':true:'1.2-2'}}</ion-row>
+  <ion-row>
+    <ion-col class="result">ලාභය / පාඩුව:</ion-col>
+    <!-- <ion-col class="result">Labaya/Paduwa:</ion-col> -->
+    <ion-col class="result textresult">{{ans | currency:'SLR':true:'1.2-2'}}</ion-col>
+  </ion-row>
+  <!-- <ion-row>ලාභය / පාඩුව:   {{ans | currency:'SLR':true:'1.2-2'}}</ion-row> -->
 </ion-grid>
 
 

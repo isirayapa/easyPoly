@@ -25,18 +25,26 @@
 	  </ion-item>
 
 	  <ion-item>
-	    <ion-label>kala seemawa(Masa)</ion-label>
+	    <!-- <ion-label>kala seemawa(Masa)</ion-label> -->
 	    <ion-label>කාල සීමාව (මාස ගණන )</ion-label>
 	    <ion-input type="number" [(ngModel)]="inp_varika" name="varika"></ion-input>
 
 	  </ion-item>
+	  <!-- <button ion-button (click)="calculate()" block>Gananaya Karanna</button> -->
 	  <button ion-button (click)="calculate()" block>ගණනය කරන්න</button>
 
 	  <ion-grid>
-	  	<!-- <ion-row><ion-label>Ipayuu Poliya:   {{ans_tot_int| currency:'SLR':true:'1.2-2'}}</ion-label></ion-row> -->
-	  	<ion-row><ion-label>ඉපැයු පොලිය:   {{ans_tot_int| currency:'SLR':true:'1.2-2'}}</ion-label></ion-row>
-	  	<!-- <ion-row><ion-label>Awasana sheshaya:   {{ans_tot| currency:'SLR':true:'1.2-2'}}</ion-label></ion-row> -->
-	  	<ion-row><ion-label>අවසාන ශේෂය:    {{ans_tot| currency:'SLR':true:'1.2-2'}}</ion-label></ion-row>
+	  	<ion-row>
+	  		<!-- <ion-col class="result">Ipayuu Poliya:</ion-col> -->
+	  		<ion-col class="result">ඉපැයු පොලිය:</ion-col>
+	  		<ion-col class="result textresult">{{ans_tot_int| currency:'SLR':true:'1.2-2'}}</ion-col>
+	  	</ion-row>
+
+	  	<ion-row>
+	  		<!-- <ion-col class="result">Awasana sheshaya:</ion-col> -->
+	  		<ion-col class="result">අවසාන ශේෂය:</ion-col>
+	  		<ion-col class="result textresult">{{ans_tot| currency:'SLR':true:'1.2-2'}}</ion-col>
+	  	</ion-row>
 	  </ion-grid>
   		
 	

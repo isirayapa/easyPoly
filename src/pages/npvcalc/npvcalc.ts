@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
+import {AlertController} from 'ionic-angular';
 /**
  * Generated class for the NpvcalcPage page.
  *
@@ -20,7 +20,7 @@ export class NpvcalcPage {
 	DiscFactor:number=0.03;
 	ans:number;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private alertController: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -28,6 +28,7 @@ export class NpvcalcPage {
   }
   addCf(){
   	this.arr.push(Number(this.inp_Cf));
+    this.presentAlert();
   }
 
   Cashflowdifference(){
@@ -38,11 +39,23 @@ export class NpvcalcPage {
   }
 
   calcCF = function(){
+    
   	var a:number=0;
   	for(var i= this.arr.length;0<i;i--){
   		a += (Number(this.arr[i-1])*(Math.pow(1-(this.DiscFactor),i)));
   	}
+
   	return a;
+    
   }
+
+  presentAlert() {
+    let alert = this.alertController.create({
+    title: 'Confirm',
+    message:'මෙම මුදල ඇතුලත් කරන්න',
+    buttons: ['Ok']
+    });
+  alert.present();
+}
 
 }
